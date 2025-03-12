@@ -1,0 +1,44 @@
+// Reset CSS de base
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  // Définition des couleurs globales
+  :root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: white;
+    --text-color: black;
+  }
+  
+  // Styles globaux pour le body
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+  }
+  
+  // Titres
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+  }
+  
+  // Liens
+  a {
+    color: var(--text-color);
+    text-decoration: none;
+  
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  // Conteneur principal
+  .container {
+    margin: 0 auto;
+    padding: 0px;
+  }  

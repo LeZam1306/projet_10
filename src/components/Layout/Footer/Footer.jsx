@@ -1,6 +1,8 @@
+import './Footer.scss'
+
 const Footer = () => {
 
-return <footer>
+return <footer className='footer'>
     <p>Copyright 2020 Argent Bank</p>
 </footer>
 
