@@ -1,0 +1,33 @@
+.hero{
+    position: relative;
+
+    &__background{
+        height: 400px;
+        width: 100%;
+        object-fit: cover;
+        object-position: 50% 33%;
+    }
+
+    &__textContent{
+        position: absolute;
+        box-sizing: content-box;
+        top: 50px;
+        right: 50px;
+        width: 300px;
+        margin: 2rem;
+        padding: 2rem;
+        background-color: white;
+
+        h1{
+            font-size: 1.5rem;
+            font-weight: bold;
+            line-height: 1.15;
+            color: var(--paragraph-color);
+        }
+        p{
+            margin-top: 20px;
+            font-size: 1.2rem;
+            line-height: 1.15;
+        }
+    }
+}

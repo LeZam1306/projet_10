@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    line-height: 1.15;
   }
   
   // Définition des couleurs globales
@@ -10,9 +11,15 @@
     --primary-color: #007bff;
     --secondary-color: #6c757d;
     --background-color: white;
-    --text-color: black;
+    --title-color: black;
+    --paragraph-color: #2C3E50;
   }
   
+  html {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
   // Styles globaux pour le body
   body {
     font-family: Arial, sans-serif;
@@ -35,6 +42,9 @@
     &:hover {
       text-decoration: underline;
     }
+  }
+  p {
+    color: var(--paragraph-color);
   }
   
   // Conteneur principal
