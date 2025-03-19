@@ -9,7 +9,7 @@
   // Définition des couleurs globales
   :root {
     --primary-color: #007bff;
-    --secondary-color: #6c757d;
+    --secondary-color: #12002b;
     --background-color: white;
     --title-color: black;
     --paragraph-color: #2C3E50;
@@ -27,6 +27,12 @@
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
+  }
+
+  #root{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
   
   // Titres

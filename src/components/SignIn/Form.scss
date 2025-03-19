@@ -1,0 +1,56 @@
+.windowForm{
+    box-sizing: border-box;
+    background-color: white;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 3rem;
+    padding: 2rem;
+    text-align: center;
+    color: var(--paragraph-color);
+
+    &__title{
+        font-size: 1.5em;
+        font-weight: bold;
+        margin: 20px 0 20px 0;
+    }
+    &__form{
+        &--text{
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            margin-bottom: 1rem;
+
+            label{
+                font-weight: bold;
+                font-size: 18px;
+            }
+            input{
+                padding: 5px;
+                font-size: 1.2rem;
+            }
+        }
+        &--checkbox{
+            display: flex;
+            flex-direction: row;
+            
+            input{
+                margin: 3px 3px 3px 4px;
+            }
+            label{
+                margin-left: 0.25rem;
+            }
+        }
+        button{
+            display: block;
+            width: 100%;
+            padding: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-top: 1rem;
+            border: solid 1px #00bc77;
+            background-color: #00bc77;
+            color: #fff;
+            text-decoration: underline;
+        }
+    }
+}

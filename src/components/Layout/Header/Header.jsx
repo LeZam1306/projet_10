@@ -6,10 +6,12 @@ import './Header.scss'
 const Header = () => {
 
     return <header className='header'>
-        <img src={logo} 
-            className='header__logo' 
-            alt='logo de ArgentBank'
-        />
+        <Link to="/">
+            <img src={logo} 
+                className='header__logo' 
+                alt='logo de ArgentBank'
+            />
+        </Link>
         <nav className='header__navBar'>
             <Link to="/sign-in">
                 <CircleUserRound size={18}/>Sign-In
