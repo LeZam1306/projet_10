@@ -2,9 +2,11 @@ import useFetch from "../../hooks/useFetch.js"
 import Hero from "../../components/Home/Hero/Hero"
 import heroImage from '../../assets/bank-tree.jpeg'
 import FeatureItem from "../../components/Home/FeatureItem/FeatureItem.jsx"
+import { useStore } from "react-redux"
 import './Home.scss'
 function Home() {
   const { data } = useFetch({url: "./contentHomePage.json"})
+  const store = useStore()
 
   return <>
     <Hero 
@@ -14,6 +16,7 @@ function Home() {
         subTitle: "Open a savings account with Argent Bank today!"
       }}
     />
+    <div></div>
     <section className="features">
       {data ? 
       data.items.map((e => {
