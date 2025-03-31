@@ -6,23 +6,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    &__editButton{
-
-    }
-
-    .transaction{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border: 1px solid black;
-        background-color: #fff;
-        width: 80%;
-        margin: 0 auto;
-        flex-direction: column;
-        padding: 1.5rem;
-        box-sizing: border-box;
-        text-align: left;
+    
+    &__header{
+        color: white;
         margin-bottom: 2rem;
+        text-align: center; 
+
+        &--title{
+            font-size: 2rem;
+            margin: 21px;
+            font-weight: bold;
+        }
     }
 }

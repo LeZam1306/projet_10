@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router'
 import { authUser } from '../../redux/slices/authSlice'
 import { useAuthInfo } from '../../hooks/useAuthInfo'
@@ -9,7 +9,7 @@ import './SignIn.scss'
 const SignIn = () => {
     const [formData, setFormData] = useState({})
     const {status, token, messageAuth, isValid} = useAuthInfo()
-    const redirection = useNavigate()
+    const navigate = useNavigate()
     const dispatch = useDispatch() 
 
     useEffect(() => {
@@ -22,7 +22,7 @@ const SignIn = () => {
         if(isValid){
             if(status === 200){
                 localStorage.setItem("token", token)
-                redirection("/dashboard")
+                navigate("/dashboard")
             }
         }
     }, [isValid])
