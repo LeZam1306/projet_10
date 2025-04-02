@@ -6,6 +6,7 @@ const Button = ({
     link = "/",
     type = "link",
     large = false,
+    disable = false,
     onClick = () => {}
 }) => {
 
@@ -25,6 +26,18 @@ const Button = ({
                     type={type} 
                     onClick={onClick}
                     className={large ? "button large" : "button medium"}
+                    disabled={disable}
+                >
+                    {children}
+                </button>
+            )
+        case "submit":
+            return(
+                <button
+                    type={type}
+                    onSubmit={onClick}
+                    className={large ? "button large" : "button medium"}
+                    disabled={disable}
                 >
                     {children}
                 </button>

@@ -1,0 +1,26 @@
+.formUserChange{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    &__input{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+
+        input{
+            padding: 3px;
+            font-size: 1rem;
+        }
+    }
+    &__buttons{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+    }
+}

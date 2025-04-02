@@ -1,24 +1,19 @@
-import { Link } from 'react-router'
-import { CircleUserRound } from 'lucide-react'
+import { Link, useLocation } from 'react-router'
+import NavBar from './NavBar'
 import logo from '../../../assets/argentBankLogo.png'
 import './Header.scss'
 
 const Header = () => {
-
-    
+    const location = useLocation()
 
     return <header className='header'>
-        <Link to="/">
+        <Link to={location.pathname === "/dashboard" ? "#" : "/"}>
             <img src={logo} 
                 className='header__logo' 
                 alt='logo de ArgentBank'
             />
         </Link>
-        <nav className='header__navBar'>
-            <Link to="/sign-in">
-                <CircleUserRound size={18}/>Sign-In
-            </Link>
-        </nav>
+        <NavBar/>    
     </header>
 }
 

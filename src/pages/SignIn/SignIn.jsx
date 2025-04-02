@@ -8,9 +8,17 @@ import './SignIn.scss'
 
 const SignIn = () => {
     const [formData, setFormData] = useState({})
-    const {status, token, messageAuth, isValid} = useAuthInfo()
+    const {token, messageAuth, isValid} = useAuthInfo()
     const navigate = useNavigate()
     const dispatch = useDispatch() 
+
+    useEffect(() => {
+        if(localStorage.getItem("token") != null){
+            if(isValid){
+                navigate("/dashboard")
+            }
+        }
+    }, [])
 
     useEffect(() => {
         if(Object.keys(formData).length != 0){
@@ -20,10 +28,12 @@ const SignIn = () => {
 
     useEffect(() => {
         if(isValid){
-            if(status === 200){
-                localStorage.setItem("token", token)
-                navigate("/dashboard")
+            if(formData.rememberme){
+                localStorage.setItem("token", token) 
+            }else{
+                sessionStorage.setItem("token", token)
             }
+            navigate("/dashboard")
         }
     }, [isValid])
     
