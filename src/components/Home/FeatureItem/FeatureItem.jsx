@@ -4,7 +4,7 @@ import './FeatureItem.scss'
 const FeatureItem = ({
         icon = "https://placehold.co/1240x1080",
         title = "Titre",
-        text
+        text = ""
     }) => {
     return <article className="feature-item">
         <img 
@@ -21,6 +21,12 @@ FeatureItem.protoTypes = {
     icon: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     paragraph: PropTypes.string
+}
+
+FeatureItem.protoTypes = {
+    icon: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired
 }
 
 export default FeatureItem

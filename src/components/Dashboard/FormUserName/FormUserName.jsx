@@ -1,4 +1,5 @@
 import { useState } from "react"
+import PropTypes from "prop-types"
 import { useUserInfo } from "../../../hooks/useUserInfo"
 import { useDispatch } from "react-redux"
 import { changeUsernameAPI } from '../../../services/APIchangeUserName'
@@ -81,6 +82,10 @@ const FormUserName = ({
             </Button>
         </div>
     </form>
+}
+
+FormUserName.propTypes = {
+    onClose: PropTypes.func
 }
 
 export default FormUserName

@@ -2,8 +2,10 @@ import PropTypes from "prop-types"
 import { useState, useEffect } from "react"
 import './Hero.scss'
 
-const Hero = ({img = "https://placehold.co/1240x1080", content}) => {
-    
+const Hero = ({
+    img = "https://placehold.co/1240x1080", 
+    content
+}) => {    
     const [title, setTitle] = useState([])
 
     useEffect(() => {

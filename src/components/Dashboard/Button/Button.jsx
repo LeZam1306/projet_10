@@ -1,4 +1,5 @@
 import { Link } from "react-router"
+import PropTypes from "prop-types"
 import './Button.scss'
 
 const Button = ({
@@ -45,6 +46,14 @@ const Button = ({
     }
 
     
+}
+
+Button.propTypes = {
+    link: PropTypes.string,
+    type: PropTypes.string,
+    large: PropTypes.bool,
+    disable: PropTypes.bool,
+    onClick: PropTypes.func
 }
 
 export default Button

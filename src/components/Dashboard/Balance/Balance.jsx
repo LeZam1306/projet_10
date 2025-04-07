@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import Button from '../Button/Button'
 import './Balance.scss'
 
@@ -18,6 +19,12 @@ const Balance = ({
             <Button large={true} type='link'>View transactions</Button>
         </div>
     </article>
+}
+
+Balance.PropTypes = {
+    title: PropTypes.string.isRequired,
+    amount: PropTypes.number.isRequired,
+    balance: PropTypes.string.isRequired
 }
 
 export default Balance

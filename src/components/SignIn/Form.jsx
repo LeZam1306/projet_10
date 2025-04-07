@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import PropTypes from "prop-types"
 import { CircleUserRound } from "lucide-react"
 import './Form.scss'
 
@@ -61,6 +62,11 @@ const Form = ({
             <button type="submit">Sign In</button>
         </form>
     </section>
+}
+
+Form.propType = {
+    onDataChange: PropTypes.func,
+    errorMessage: PropTypes.string
 }
 
 export default Form
